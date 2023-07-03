@@ -3,87 +3,23 @@
 <head>
   <title>Bean Paradise</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-    }
+    /* CSS styles for other sections */
 
-    .header {
-      background-color: #6D5A5A;
-      color: #FFF;
-      padding: 20px;
-      text-align: center;
-    }
+    /* ... Existing CSS styles ... */
 
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 20px;
-    }
-
-    h1 {
+    .forum-comment {
+      margin-bottom: 10px;
       color: #6D5A5A;
-      text-align: center;
-      margin-bottom: 30px;
     }
 
-    section {
-      margin-bottom: 50px;
-    }
-
-    .section-heading {
-      font-size: 24px;
-      color: #6D5A5A;
-      margin-bottom: 20px;
-    }
-
-    .section-content {
-      color: #6D5A5A;
-      line-height: 1.6;
-    }
-
-    .background-section {
-      background-color: #F9F8F6;
-      padding: 20px;
-    }
-
-    .contact-section {
-      background-color: #F1ECEB;
-      padding: 20px;
-    }
-
-    .contact-form {
-      max-width: 600px;
-      margin: 0 auto;
-    }
-
-    .form-group {
-      margin-bottom: 20px;
-    }
-
-    .form-label {
-      display: block;
-      font-weight: bold;
-      margin-bottom: 5px;
-    }
-
-    .form-input {
+    .comment-input {
       width: 100%;
       padding: 10px;
       border: 1px solid #6D5A5A;
       border-radius: 5px;
     }
 
-    .form-textarea {
-      width: 100%;
-      padding: 10px;
-      border: 1px solid #6D5A5A;
-      border-radius: 5px;
-      resize: vertical;
-    }
-
-    .form-submit {
+    .comment-submit {
       background-color: #6D5A5A;
       color: #FFF;
       border: none;
@@ -92,30 +28,35 @@
       cursor: pointer;
     }
 
-    .form-submit:hover {
+    .comment-submit:hover {
       background-color: #5A4646;
     }
-
-    .help-forum-section {
-      background-color: #EAE8E7;
-      padding: 20px;
-    }
-
-    .forum-topic {
-      margin-bottom: 10px;
-      font-weight: bold;
-      color: #6D5A5A;
-    }
-
-    .forum-post {
-      margin-bottom: 20px;
-      color: #6D5A5A;
-    }
-
-    .forum-post:last-child {
-      margin-bottom: 0;
-    }
   </style>
+  <script>
+    // JavaScript for anonymous forum functionality
+    window.addEventListener('DOMContentLoaded', (event) => {
+      const commentForm = document.getElementById('comment-form');
+      const commentList = document.getElementById('comment-list');
+      let commentId = 1;
+
+      commentForm.addEventListener('submit', (event) => {
+        event.preventDefault();
+
+        const commentInput = document.getElementById('comment-input');
+        const commentText = commentInput.value.trim();
+
+        if (commentText !== '') {
+          const commentItem = document.createElement('li');
+          commentItem.classList.add('forum-comment');
+          commentItem.textContent = `Anonymous User ${commentId}: ${commentText}`;
+          commentList.appendChild(commentItem);
+
+          commentInput.value = '';
+          commentId++;
+        }
+      });
+    });
+  </script>
 </head>
 <body>
   <div class="header">
@@ -189,15 +130,16 @@
     <section>
       <div class="help-forum-section">
         <h2 class="section-heading">Help Forum</h2>
-        <div class="forum-topic">
-          <span class="forum-post">Question: How to improve bean plant yield?</span>
-          <span class="forum-post">Answer: Make sure to provide adequate sunlight, water, and nutrients to your bean plants. Proper spacing and regular weeding also contribute to improved yield.</span>
-        </div>
-        <div class="forum-topic">
-          <span class="forum-post">Question: What are common pests that affect bean plants?</span>
-          <span class="forum-post">Answer: Some common pests include aphids, bean beetles, and spider mites. Regular inspection and timely pest control measures can help protect your bean plants.</span>
-        </div>
-        <!-- Add more forum topics and posts here -->
+        <ul id="comment-list">
+          <li class="forum-comment">Question: How to improve bean plant yield?</li>
+          <li class="forum-comment">Answer: Make sure to provide adequate sunlight, water, and nutrients to your bean plants. Proper spacing and regular weeding also contribute to improved yield.</li>
+          <li class="forum-comment">Question: What are common pests that affect bean plants?</li>
+          <li class="forum-comment">Answer: Some common pests include aphids, bean beetles, and spider mites. Regular inspection and timely pest control measures can help protect your bean plants.</li>
+        </ul>
+        <form id="comment-form">
+          <textarea id="comment-input" class="comment-input" rows="3" placeholder="Type your comment here..." required></textarea>
+          <button class="comment-submit" type="submit">Post Comment</button>
+        </form>
       </div>
     </section>
   </div>
