@@ -4,10 +4,16 @@
   <title>Bean Paradise</title>
   <style>
     body {
-      background-color: #F9F8F6;
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
+    }
+
+    .header {
+      background-color: #6D5A5A;
+      color: #FFF;
+      padding: 20px;
+      text-align: center;
     }
 
     .container {
@@ -22,185 +28,178 @@
       margin-bottom: 30px;
     }
 
-    .dropdown {
-      display: flex;
-      flex-direction: column;
-      margin: 10px;
+    section {
+      margin-bottom: 50px;
     }
 
-    .dropdown-content {
-      display: none;
-      position: absolute;
-      background-color: #F9F8F6;
-      min-width: 200px;
-      box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-      z-index: 1;
-      padding: 10px;
-      animation: fadeIn 0.3s ease-in-out;
-    }
-
-    .dropdown:hover .dropdown-content {
-      display: block;
-    }
-
-    .dropdown-content a {
+    .section-heading {
+      font-size: 24px;
       color: #6D5A5A;
-      text-decoration: none;
-      padding: 5px;
-      animation: slideIn 0.3s ease-in-out;
+      margin-bottom: 20px;
     }
 
-    .dropdown-content a:hover {
+    .section-content {
+      color: #6D5A5A;
+      line-height: 1.6;
+    }
+
+    .background-section {
+      background-color: #F9F8F6;
+      padding: 20px;
+    }
+
+    .contact-section {
+      background-color: #F1ECEB;
+      padding: 20px;
+    }
+
+    .contact-form {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    .form-input {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #6D5A5A;
+      border-radius: 5px;
+    }
+
+    .form-textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #6D5A5A;
+      border-radius: 5px;
+      resize: vertical;
+    }
+
+    .form-submit {
+      background-color: #6D5A5A;
+      color: #FFF;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .form-submit:hover {
+      background-color: #5A4646;
+    }
+
+    .help-forum-section {
       background-color: #EAE8E7;
+      padding: 20px;
     }
 
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
+    .forum-topic {
+      margin-bottom: 10px;
+      font-weight: bold;
+      color: #6D5A5A;
     }
 
-    @keyframes slideIn {
-      from { transform: translateY(-10px); opacity: 0; }
-      to { transform: translateY(0); opacity: 1; }
+    .forum-post {
+      margin-bottom: 20px;
+      color: #6D5A5A;
     }
 
-    @media (max-width: 768px) {
-      .dropdown {
-        flex-direction: row;
-      }
-
-      .dropdown-content {
-        position: static;
-        box-shadow: none;
-        animation: none;
-        display: block;
-      }
-
-      .dropdown:hover .dropdown-content {
-        display: none;
-      }
+    .forum-post:last-child {
+      margin-bottom: 0;
     }
   </style>
 </head>
 <body>
-  <div class="container">
+  <div class="header">
     <h1>Welcome to Bean Paradise</h1>
-    <div class="dropdown">
-      <span>Types of Beans</span>
-      <div class="dropdown-content">
-        <a href="#">
-          Lima Beans
-          <p>Lima beans, also known as butter beans, are large and creamy in texture. They are a great source of dietary fiber and protein.</p>
-        </a>
-        <a href="#">
-          Kidney Beans
-          <p>Kidney beans are kidney-shaped and have a rich, hearty flavor. They are commonly used in chili, soups, and salads.</p>
-        </a>
-        <a href="#">
-          Black Beans
-          <p>Black beans are small, shiny, and have a velvety texture. They are a staple in Latin American cuisine and packed with antioxidants.</p>
-        </a>
-        <a href="#">
-          Pinto Beans
-          <p>Pinto beans are speckled and have a creamy texture. They are commonly used in Mexican dishes like refried beans and burritos.</p>
-        </a>
-        <a href="#">
-          Chickpeas
-          <p>Chickpeas, also known as garbanzo beans, are versatile legumes with a nutty flavor. They are used in hummus, curries, and salads.</p>
-        </a>
-        <a href="#">
-          Soybeans
-          <p>Soybeans are high in protein and widely used in various forms like tofu, soy milk, and edamame. They are a staple in Asian cuisine.</p>
-        </a>
+  </div>
+
+  <div class="container">
+    <section>
+      <div class="background-section">
+        <h2 class="section-heading">Types of Beans</h2>
+        <p class="section-content">
+          Beans are a versatile and nutritious food that comes in various types and flavors. Some popular types of beans include Lima Beans, Kidney Beans, Black Beans, Pinto Beans, Chickpeas, and Soybeans. Each type of bean has its unique characteristics and culinary uses.
+        </p>
+        <!-- Add more content here -->
       </div>
-    </div>
-    <div class="dropdown">
-      <span>Bean Recipes</span>
-      <div class="dropdown-content">
-        <a href="#">
-          Bean Salad
-          <p>A refreshing salad made with a variety of beans, mixed vegetables, and a tangy dressing. Perfect for a light and healthy meal.</p>
-        </a>
-        <a href="#">
-          Bean Soup
-          <p>Hearty and comforting soup made with beans, vegetables, and aromatic herbs. Ideal for warming up on a cold day.</p>
-        </a>
-        <a href="#">
-          Baked Beans
-          <p>A classic dish made with slow-cooked beans, tomato sauce, and a touch of sweetness. Perfect as a side for barbecues and picnics.</p>
-        </a>
-        <a href="#">
-          Chili with Beans
-          <p>A spicy and flavorful chili made with ground beef, beans, tomatoes, and spices. Serve with rice or cornbread for a satisfying meal.</p>
-        </a>
-        <a href="#">
-          Bean Burgers
-          <p>Delicious vegetarian burgers made with mashed beans, breadcrumbs, and spices. A healthy alternative to traditional meat burgers.</p>
-        </a>
-        <a href="#">
-          Hummus
-          <p>A creamy dip made from mashed chickpeas, tahini, lemon juice, and garlic. Perfect for snacking with pita bread or vegetables.</p>
-        </a>
+    </section>
+
+    <section>
+      <div class="background-section">
+        <h2 class="section-heading">Bean Recipes</h2>
+        <p class="section-content">
+          Beans can be used in a wide range of delicious recipes. From soups and stews to salads and burgers, beans add flavor, texture, and nutrition to your meals. Some popular bean recipes include Bean Salad, Bean Soup, Baked Beans, Chili with Beans, Bean Burgers, and Hummus.
+        </p>
+        <!-- Add more content here -->
       </div>
-    </div>
-    <div class="dropdown">
-      <span>Bean Nutrition</span>
-      <div class="dropdown-content">
-        <a href="#">
-          Benefits of Beans
-          <p>Beans are a nutritious food packed with vitamins, minerals, and antioxidants. They provide numerous health benefits, including improved digestion and heart health.</p>
-        </a>
-        <a href="#">
-          Bean Protein
-          <p>Beans are an excellent source of plant-based protein, making them a great option for vegetarians and vegans. They can help build and repair tissues in the body.</p>
-        </a>
-        <a href="#">
-          Fiber in Beans
-          <p>Beans are rich in dietary fiber, which aids digestion, promotes satiety, and helps maintain stable blood sugar levels.</p>
-        </a>
-        <a href="#">
-          Vitamins and Minerals
-          <p>Beans contain essential vitamins and minerals such as folate, iron, magnesium, and potassium, which are important for overall health and wellbeing.</p>
-        </a>
-        <a href="#">
-          Antioxidants in Beans
-          <p>Beans are loaded with antioxidants that help protect the body against free radicals and reduce the risk of chronic diseases.</p>
-        </a>
-        <a href="#">
-          Health Benefits
-          <p>Regular consumption of beans has been linked to various health benefits, including reduced cholesterol levels, improved gut health, and weight management.</p>
-        </a>
+    </section>
+
+    <section>
+      <div class="background-section">
+        <h2 class="section-heading">Bean Nutrition</h2>
+        <p class="section-content">
+          Beans are a nutritional powerhouse, packed with essential vitamins, minerals, fiber, and plant-based protein. They offer numerous health benefits, including improved digestion, heart health, and weight management. Incorporating beans into your diet can boost your overall well-being.
+        </p>
+        <!-- Add more content here -->
       </div>
-    </div>
-    <div class="dropdown">
-      <span>Bean Farming</span>
-      <div class="dropdown-content">
-        <a href="#">
-          Bean Planting Guide
-          <p>A comprehensive guide on how to plant beans, including soil preparation, seed planting, and care tips for healthy growth.</p>
-        </a>
-        <a href="#">
-          Soil Requirements
-          <p>Learn about the ideal soil conditions required for successful bean cultivation, including pH levels, drainage, and nutrient content.</p>
-        </a>
-        <a href="#">
-          Bean Harvesting
-          <p>Discover the best time to harvest beans, different harvesting methods, and tips for proper handling and storage.</p>
-        </a>
-        <a href="#">
-          Pest Control
-          <p>Explore effective strategies to prevent and control common pests and diseases that can affect bean plants.</p>
-        </a>
-        <a href="#">
-          Bean Varieties
-          <p>Learn about different bean varieties, including their growth habits, flavor profiles, and recommended uses in culinary preparations.</p>
-        </a>
-        <a href="#">
-          Sustainable Farming
-          <p>Discover eco-friendly and sustainable farming practices for bean cultivation, such as crop rotation, organic fertilizers, and water conservation.</p>
-        </a>
+    </section>
+
+    <section>
+      <div class="background-section">
+        <h2 class="section-heading">Bean Farming</h2>
+        <p class="section-content">
+          Bean farming involves various aspects, from planting and soil preparation to pest control and harvesting. Understanding the proper techniques and best practices is crucial for successful bean cultivation. Learn about bean planting guides, soil requirements, pest control strategies, and sustainable farming practices.
+        </p>
+        <!-- Add more content here -->
       </div>
-    </div>
+    </section>
+
+    <section>
+      <div class="contact-section">
+        <h2 class="section-heading">Contact Us</h2>
+        <div class="contact-form">
+          <form>
+            <div class="form-group">
+              <label class="form-label" for="name">Name:</label>
+              <input class="form-input" type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="email">Email:</label>
+              <input class="form-input" type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="message">Message:</label>
+              <textarea class="form-textarea" id="message" name="message" required></textarea>
+            </div>
+            <button class="form-submit" type="submit">Submit</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="help-forum-section">
+        <h2 class="section-heading">Help Forum</h2>
+        <div class="forum-topic">
+          <span class="forum-post">Question: How to improve bean plant yield?</span>
+          <span class="forum-post">Answer: Make sure to provide adequate sunlight, water, and nutrients to your bean plants. Proper spacing and regular weeding also contribute to improved yield.</span>
+        </div>
+        <div class="forum-topic">
+          <span class="forum-post">Question: What are common pests that affect bean plants?</span>
+          <span class="forum-post">Answer: Some common pests include aphids, bean beetles, and spider mites. Regular inspection and timely pest control measures can help protect your bean plants.</span>
+        </div>
+        <!-- Add more forum topics and posts here -->
+      </div>
+    </section>
   </div>
 </body>
 </html>
