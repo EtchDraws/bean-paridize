@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bean Paradise</title>
+  <style>
+    body {
+      background-color: #F9F8F6;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    h1 {
+      color: #6D5A5A;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .dropdown {
+      display: flex;
+      flex-direction: column;
+      margin: 10px;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #F9F8F6;
+      min-width: 200px;
+      box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+      z-index: 1;
+      padding: 10px;
+      animation: fadeIn 0.3s ease-in-out;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .dropdown-content a {
+      color: #6D5A5A;
+      text-decoration: none;
+      padding: 5px;
+      animation: slideIn 0.3s ease-in-out;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #EAE8E7;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes slideIn {
+      from { transform: translateY(-10px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    @media (max-width: 768px) {
+      .dropdown {
+        flex-direction: row;
+      }
+
+      .dropdown-content {
+        position: static;
+        box-shadow: none;
+        animation: none;
+        display: block;
+      }
+
+      .dropdown:hover .dropdown-content {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Welcome to Bean Paradise</h1>
+    <div class="dropdown">
+      <span>Types of Beans</span>
+      <div class="dropdown-content">
+        <a href="#">
+          Lima Beans
+          <p>Lima beans, also known as butter beans, are large and creamy in texture. They are a great source of dietary fiber and protein.</p>
+        </a>
+        <a href="#">
+          Kidney Beans
+          <p>Kidney beans are kidney-shaped and have a rich, hearty flavor. They are commonly used in chili, soups, and salads.</p>
+        </a>
+        <a href="#">
+          Black Beans
+          <p>Black beans are small, shiny, and have a velvety texture. They are a staple in Latin American cuisine and packed with antioxidants.</p>
+        </a>
+        <a href="#">
+          Pinto Beans
+          <p>Pinto beans are speckled and have a creamy texture. They are commonly used in Mexican dishes like refried beans and burritos.</p>
+        </a>
+        <a href="#">
+          Chickpeas
+          <p>Chickpeas, also known as garbanzo beans, are versatile legumes with a nutty flavor. They are used in hummus, curries, and salads.</p>
+        </a>
+        <a href="#">
+          Soybeans
+          <p>Soybeans are high in protein and widely used in various forms like tofu, soy milk, and edamame. They are a staple in Asian cuisine.</p>
+        </a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <span>Bean Recipes</span>
+      <div class="dropdown-content">
+        <a href="#">
+          Bean Salad
+          <p>A refreshing salad made with a variety of beans, mixed vegetables, and a tangy dressing. Perfect for a light and healthy meal.</p>
+        </a>
+        <a href="#">
+          Bean Soup
+          <p>Hearty and comforting soup made with beans, vegetables, and aromatic herbs. Ideal for warming up on a cold day.</p>
+        </a>
+        <a href="#">
+          Baked Beans
+          <p>A classic dish made with slow-cooked beans, tomato sauce, and a touch of sweetness. Perfect as a side for barbecues and picnics.</p>
+        </a>
+        <a href="#">
+          Chili with Beans
+          <p>A spicy and flavorful chili made with ground beef, beans, tomatoes, and spices. Serve with rice or cornbread for a satisfying meal.</p>
+        </a>
+        <a href="#">
+          Bean Burgers
+          <p>Delicious vegetarian burgers made with mashed beans, breadcrumbs, and spices. A healthy alternative to traditional meat burgers.</p>
+        </a>
+        <a href="#">
+          Hummus
+          <p>A creamy dip made from mashed chickpeas, tahini, lemon juice, and garlic. Perfect for snacking with pita bread or vegetables.</p>
+        </a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <span>Bean Nutrition</span>
+      <div class="dropdown-content">
+        <a href="#">
+          Benefits of Beans
+          <p>Beans are a nutritious food packed with vitamins, minerals, and antioxidants. They provide numerous health benefits, including improved digestion and heart health.</p>
+        </a>
+        <a href="#">
+          Bean Protein
+          <p>Beans are an excellent source of plant-based protein, making them a great option for vegetarians and vegans. They can help build and repair tissues in the body.</p>
+        </a>
+        <a href="#">
+          Fiber in Beans
+          <p>Beans are rich in dietary fiber, which aids digestion, promotes satiety, and helps maintain stable blood sugar levels.</p>
+        </a>
+        <a href="#">
+          Vitamins and Minerals
+          <p>Beans contain essential vitamins and minerals such as folate, iron, magnesium, and potassium, which are important for overall health and wellbeing.</p>
+        </a>
+        <a href="#">
+          Antioxidants in Beans
+          <p>Beans are loaded with antioxidants that help protect the body against free radicals and reduce the risk of chronic diseases.</p>
+        </a>
+        <a href="#">
+          Health Benefits
+          <p>Regular consumption of beans has been linked to various health benefits, including reduced cholesterol levels, improved gut health, and weight management.</p>
+        </a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <span>Bean Farming</span>
+      <div class="dropdown-content">
+        <a href="#">
+          Bean Planting Guide
+          <p>A comprehensive guide on how to plant beans, including soil preparation, seed planting, and care tips for healthy growth.</p>
+        </a>
+        <a href="#">
+          Soil Requirements
+          <p>Learn about the ideal soil conditions required for successful bean cultivation, including pH levels, drainage, and nutrient content.</p>
+        </a>
+        <a href="#">
+          Bean Harvesting
+          <p>Discover the best time to harvest beans, different harvesting methods, and tips for proper handling and storage.</p>
+        </a>
+        <a href="#">
+          Pest Control
+          <p>Explore effective strategies to prevent and control common pests and diseases that can affect bean plants.</p>
+        </a>
+        <a href="#">
+          Bean Varieties
+          <p>Learn about different bean varieties, including their growth habits, flavor profiles, and recommended uses in culinary preparations.</p>
+        </a>
+        <a href="#">
+          Sustainable Farming
+          <p>Discover eco-friendly and sustainable farming practices for bean cultivation, such as crop rotation, organic fertilizers, and water conservation.</p>
+        </a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
